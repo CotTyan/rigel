@@ -18,27 +18,27 @@ end
 
 bot.command :about do |event|
     event.send_embed do |embed|
-      embed.title = "About Rigel"
-      embed.url = "https://github.com/laminne/rigel"
-      embed.colour = 0x00ccff
-      embed.description = "**CotTyanをRuby(Discordrb)で書き直すプロジェクト**"
-      embed.footer = Discordrb::Webhooks::EmbedFooter.new(
-        text: "このボットのソースコードはMITライセンスの元、オープンソースで公開されています",
-      )
-      embed.author = Discordrb::Webhooks::EmbedAuthor.new(
-        name: 'Laminne',
-        url: 'https://github.com/laminne',
-        icon_url: 'https://github.com/laminne.png'
-      )
-    end
+        embed.title = "About Rigel"
+        embed.url = "https://github.com/laminne/rigel"
+        embed.colour = 0x00ccff
+        embed.description = "**CotTyanをRuby(Discordrb)で書き直すプロジェクト**"
+        embed.footer = Discordrb::Webhooks::EmbedFooter.new(
+            text: "このボットのソースコードはMITライセンスの元、オープンソースで公開されています",
+        )
+        embed.author = Discordrb::Webhooks::EmbedAuthor.new(
+          name: 'Laminne',
+          url: 'https://github.com/laminne',
+          icon_url: 'https://github.com/laminne.png'
+        )
+        end
   end
 
-  bot.command :LICENSE do |event|
+bot.command :LICENSE do |event|
     event.send_embed do |embed|
-      embed.title = "LICENSE"
-      embed.url = "https://github.com/laminne/rigel"
-      embed.colour = 0x00ccff
-      embed.description = "```MIT License
+        embed.title = "LICENSE"
+        embed.url = "https://github.com/laminne/rigel"
+        embed.colour = 0x00ccff
+        embed.description = "```MIT License
 
       Copyright (c) 2020 Tatsuto Laminne Yamamoto
       
@@ -59,13 +59,13 @@ bot.command :about do |event|
       LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
       OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
       SOFTWARE.```"
-      embed.footer = Discordrb::Webhooks::EmbedFooter.new(
-        text: "詳しくはプロジェクトページをご覧ください。",
-      )
-      embed.author = Discordrb::Webhooks::EmbedAuthor.new(
-        name: 'Laminne',
-        url: 'https://github.com/laminne',
-        icon_url: 'https://github.com/laminne.png'
+        embed.footer = Discordrb::Webhooks::EmbedFooter.new(
+            text: "詳しくはプロジェクトページをご覧ください。",
+        )
+        embed.author = Discordrb::Webhooks::EmbedAuthor.new(
+            name: 'Laminne',
+            url: 'https://github.com/laminne',
+            icon_url: 'https://github.com/laminne.png'
       )
     end
   end
@@ -82,4 +82,5 @@ bot.voice_state_update do |event|
         bot.send_message(info_channel, " ```#{user} が #{channel_name}に入りました```")
     end
 end
+
 bot.run
