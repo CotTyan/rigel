@@ -10,6 +10,7 @@ Python で書かれた CotTyan(v2.x)の一部を Ruby で書き直すプロジ�
 TOKEN="<Discord Bot token>"
 CLIENT_ID="<Discord Bot Client ID>"
 CHANNEL_ID="<Discord Channel ID>"
+TRANSFER="<Discord Channel ID>"
 ```
 
 環境に合わせ適宜書き換えてください

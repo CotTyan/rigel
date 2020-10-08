@@ -4,6 +4,7 @@ require 'dotenv'
 Dotenv.load
 
 info_channel = ENV['CHANNEL_ID']
+transfer_to = ENV['TRANSFER']
 
 bot = Discordrb::Commands::CommandBot.new(
     token: ENV['TOKEN'],
@@ -80,6 +81,13 @@ bot.voice_state_update do |event|
         channel_name = event.channel.name
 
         bot.send_message(info_channel, " ```#{user} が #{channel_name}に入りました```")
+    end
+end
+
+bot.reaction_add do | event |
+    if event.emoji.name == "📧"
+        message = event.message
+        bot.send_message(transfer_to, "```#{message}```")        
     end
 end
 
