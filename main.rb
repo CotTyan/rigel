@@ -34,6 +34,18 @@ bot.command :about do |event|
         end
   end
 
+bot.command :help do | event |
+    event.send_embed do | embed |
+        embed.title = "Command List"
+        embed.url = "https://github.com/laminne/rigel"
+        embed.colour = 0x00ccff
+        embed.description = "```*r.help - このヘルプを表示\n*r.about - このボットの詳細を表示\n*r.LICENSE - ソースコードのライセンスを表示 ``` ***†新機能†*** \n メッセージに📧の絵文字をつけると自動的に学校からのお知らせチャンネルに転送します\n\n機能追加は言ってもらえば(僕の技術力の許す限り)しようと思いますのでよろしくお願いします"
+        embed.footer = Discordrb::Webhooks::EmbedFooter.new(
+            text: "このボットのソースコードはMITライセンスの元、オープンソースで公開されています",
+        )
+    end
+end
+
 bot.command :LICENSE do |event|
     event.send_embed do |embed|
         embed.title = "LICENSE"
