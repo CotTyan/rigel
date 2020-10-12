@@ -31,8 +31,8 @@ bot.command :about do |event|
           url: 'https://github.com/laminne',
           icon_url: 'https://github.com/laminne.png'
         )
-        end
-  end
+    end
+end
 
 bot.command :help do | event |
     event.send_embed do | embed |
@@ -44,6 +44,11 @@ bot.command :help do | event |
             text: "このボットのソースコードはMITライセンスの元、オープンソースで公開されています",
         )
     end
+end
+
+bot.command :boom do | event |
+    sendto = event.channel.id
+    bot.send_message(sendto, "https://media.discordapp.net/attachments/760420622613479466/765203067015659530/2020-10-12_22-23-18.png?width=661&height=480")
 end
 
 bot.command :LICENSE do |event|
@@ -99,8 +104,9 @@ end
 bot.reaction_add do | event |
     if event.emoji.name == "📧"
         message = event.message
-        bot.send_message(transfer_to, "```#{message}```")        
+        bot.send_message(transfer_to, "```#{message}```")
     end
 end
 
 bot.run
+
