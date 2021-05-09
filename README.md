@@ -1,4 +1,5 @@
 # Rigel
+![image](https://user-images.githubusercontent.com/40442980/117563905-0651fa80-b0e4-11eb-87e0-b36dcaf99f9d.png)
 
 Python で書かれた CotTyan(v2.x)の一部を Ruby で書き直すプロジェクト
 
